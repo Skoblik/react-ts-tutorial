@@ -5,8 +5,8 @@ import { Person } from "./components/person/Person";
 
 function App() {
   const personName = {
-    first: "Bruce",
-    last: "Wayne",
+    first: "Yurii",
+    last: "The Great",
   };
 
   const nameList = [
