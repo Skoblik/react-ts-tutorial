@@ -4,13 +4,15 @@ export const PersonList = (props: PersonListProps) => {
   return (
     <div>
       <h1>List of persons</h1>
-      {props.names.map((name) => {
-        return (
-          <h2 key={name.first}>
-            {name.first} {name.last}
-          </h2>
-        );
-      })}
+      <ul>
+        {props.names.map((name) => {
+          return (
+            <li key={name.last}>
+              {name.first} {name.last}
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 };
