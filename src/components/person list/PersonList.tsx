@@ -7,7 +7,7 @@ export const PersonList = (props: PersonListProps) => {
       <ul>
         {props.names.map((name) => {
           return (
-            <li key={name.first}>
+            <li key={name.last}>
               {name.first} {name.last}
             </li>
           );
