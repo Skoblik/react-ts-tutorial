@@ -31,4 +31,13 @@ describe("Greet Component", () => {
       `Greetings ${personName.first}! Lucky thing will happen today with you ${messageCount} times`
     );
   });
+
+  test("should render the component with proper text when 'messageCount' not defined", () => {
+    render(<Greet name={personName.first} isLoggedIn={true} />);
+
+    const greetElement = screen.getByRole("heading", { level: 2 });
+    expect(greetElement).toHaveTextContent(
+      `Greetings ${personName.first}! Lucky thing will happen today with you 0 times`
+    );
+  });
 });
