@@ -1,20 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { PersonList } from "./PersonList";
-
-const nameList = [
-  {
-    first: "Person",
-    last: "One",
-  },
-  {
-    first: "Person",
-    last: "Two",
-  },
-  {
-    first: "Person",
-    last: "Three",
-  },
-];
+import { nameList } from "../../data/PersonStorage";
 
 describe("PersonList Component", () => {
   test("should render the heading", () => {
