@@ -14,8 +14,8 @@ import { nameList, personName } from "./data/PersonStorage";
 function App() {
   return (
     <div className="App">
-      <Greet name="Yurii" messageCount={11} isLoggedIn={true} />
-      <Person name={personName} />
+      <Greet name="Yurii" messageCount={12} isLoggedIn={true} />
+      {/* <Person name={personName} />
       <PersonList names={nameList} />
       <Status status="success" />
       <Heading>Heading component</Heading>
@@ -28,7 +28,7 @@ function App() {
         }}
       />
       <Input value="" handleChange={(event) => console.log(event)} />
-      <Container styles={{ border: "1px solid black", padding: "1rem" }} />
+      <Container styles={{ border: "1px solid black", padding: "1rem" }} /> */}
       <LoggendIn />
     </div>
   );
