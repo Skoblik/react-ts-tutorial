@@ -8,6 +8,7 @@ import { Oscar } from "./components/oscar/Oscar";
 import { PersonList } from "./components/person list/PersonList";
 import { Person } from "./components/person/Person";
 import { LoggendIn } from "./components/state/LoggendIn";
+import { User } from "./components/state/User";
 import { Status } from "./components/status/Status";
 import { nameList, personName } from "./data/PersonStorage";
 
@@ -30,6 +31,7 @@ function App() {
       <Input value="" handleChange={(event) => console.log(event)} />
       <Container styles={{ border: "1px solid black", padding: "1rem" }} /> */}
       <LoggendIn />
+      <User name="Bobr" email="bobr_k@test.com" />
     </div>
   );
 }
