@@ -1,7 +1,11 @@
 import { useState } from "react";
 
-export const LoggendIn = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+export const LoggedIn = ({
+  initialLoginState = false,
+}: {
+  initialLoginState?: boolean;
+}) => {
+  const [isLoggedIn, setIsLoggedIn] = useState(initialLoginState);
 
   const handleLogin = () => {
     setIsLoggedIn(true);
@@ -13,7 +17,7 @@ export const LoggendIn = () => {
     <div>
       <button onClick={handleLogin}>Login</button>
       <button onClick={handleLogout}>Logout</button>
-      <div>User is {isLoggedIn ? "loggend in" : "logged out"}</div>
+      <div>User is {isLoggedIn ? "logged in" : "logged out"}</div>
     </div>
   );
 };
