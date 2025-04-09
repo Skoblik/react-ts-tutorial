@@ -1,6 +1,8 @@
 import "./App.css";
 import { Button } from "./components/button/Button";
 import { Container } from "./components/container/Container";
+import { Box } from "./components/context/Box";
+import { ThemeContextProvider } from "./components/context/ThemeContext";
 import { Greet } from "./components/greet/Greet";
 import { Heading } from "./components/heading/Heading";
 import { Input } from "./components/input/Input";
@@ -34,6 +36,9 @@ function App() {
       <LoggedIn />
       <User name="Bobr" email="bobr_k@test.com" />
       <Counter />
+      <ThemeContextProvider>
+        <Box />
+      </ThemeContextProvider>
     </div>
   );
 }
