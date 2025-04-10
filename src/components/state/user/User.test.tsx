@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { User } from "./User";
-import { roles } from "../../data/rolesStorage";
+import { roles } from "../../../data/rolesStorage";
 
 describe("User Component", () => {
   test("should render the component", () => {
