@@ -9,9 +9,9 @@ import { Input } from "./components/input/Input";
 import { Oscar } from "./components/oscar/Oscar";
 import { PersonList } from "./components/person list/PersonList";
 import { Person } from "./components/person/Person";
-import { Counter } from "./components/state/Counter";
-import { LoggedIn } from "./components/state/LoggedIn";
-import { User } from "./components/state/User";
+import { Counter } from "./components/state/counter/Counter";
+import { LoggedIn } from "./components/state/loggedIn/LoggedIn";
+import { User } from "./components/state/user/User";
 import { Status } from "./components/status/Status";
 import { nameList, personName } from "./data/PersonStorage";
 
