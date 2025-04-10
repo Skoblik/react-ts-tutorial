@@ -35,7 +35,7 @@ export const Counter = () => {
 
   return (
     <div>
-      Count: {state.count}
+      <p>Count: {state.count}</p>
       <button onClick={() => dispatch({ type: "increment", payload: 10 })}>
         Increment 10
       </button>
