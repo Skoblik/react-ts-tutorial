@@ -34,7 +34,6 @@ describe("Counter Component", () => {
     expect(countTextContainer).toHaveTextContent("Count: 0");
 
     user.click(incrementButton);
-
     expect(countTextContainer).toHaveTextContent("Count: 10");
   });
 
@@ -49,7 +48,38 @@ describe("Counter Component", () => {
     expect(countTextContainer).toHaveTextContent("Count: 0");
 
     user.click(decrementButton);
-
     expect(countTextContainer).toHaveTextContent("Count: -10");
+  });
+
+  test("should reset count to 0 from incremented", () => {
+    render(<Counter />);
+
+    const countTextContainer = screen.getByText(/count:/i);
+    const resetButton = screen.getByRole("button", { name: /reset/i });
+    const incrementButton = screen.getByRole("button", {
+      name: /increment 10/i,
+    });
+
+    user.click(incrementButton);
+    expect(countTextContainer).toHaveTextContent("Count: 10");
+
+    user.click(resetButton);
+    expect(countTextContainer).toHaveTextContent("Count: 0");
+  });
+
+  test("should reset count to 0 from decremented", () => {
+    render(<Counter />);
+
+    const countTextContainer = screen.getByText(/count:/i);
+    const resetButton = screen.getByRole("button", { name: /reset/i });
+    const decrementButton = screen.getByRole("button", {
+      name: /decrement 10/i,
+    });
+
+    user.click(decrementButton);
+    expect(countTextContainer).toHaveTextContent("Count: -10");
+
+    user.click(resetButton);
+    expect(countTextContainer).toHaveTextContent("Count: 0");
   });
 });
