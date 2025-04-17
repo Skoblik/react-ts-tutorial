@@ -1,17 +1,5 @@
 import { act, useReducer } from "react";
-
-type CounterState = {
-  count: number;
-};
-
-type UpdateAction = {
-  type: "increment" | "decrement";
-  payload: number;
-};
-
-type ResetAction = {
-  type: "reset";
-};
+import { CounterState, ResetAction, UpdateAction } from "./Counter.types";
 
 type CounterAction = UpdateAction | ResetAction;
 
